@@ -1,0 +1,365 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body { 
+  background: #222;
+  font-family: 'Oswald', sans-serif;
+}
+
+#homeimg {
+  width: 130px;
+  height: 116px;
+  float: left;
+  position: absolute;
+}
+
+header {
+  background-color: rgb(76,21,104);
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.skipnav a {
+  float: right;
+  color: rgb(253, 185, 39);
+  font-size: 15px;
+}
+
+nav {
+  float: right;
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 150px;
+  margin-left: 120px;
+  padding-top: 40px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+nav a {
+  color: rgb(253, 185, 39);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+nav a:hover{
+  color:rgb(146, 146, 146)
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: rgb(189, 75, 255);
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 300ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+.homebox {
+  background-color: rgb(179, 36, 250);
+  margin: 50px 136px 10px;
+  padding: 30px 75px 50px;
+}
+
+.homebox p {
+  font-size: 20px;
+  font-family: 'Asap', sans-serif;
+}
+
+.standingslider {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  position: relative;
+}
+
+.slider-button {
+  border: none;
+  display: inline;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 0px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%)
+}
+
+.mySlides {
+  width: 100%;
+  height:110px;
+}
+
+.slider-button:hover {
+  color: rgb(104, 104, 104);
+}
+
+.display-left {
+  left: 0%;
+}
+
+.display-right {
+  right: 0%;
+}
+
+/*ROSTER FLIKEN*/
+
+.rostericon {
+  padding-top: 80px;
+}
+
+.roster {
+  display: flex; 
+  flex-direction: row;
+}
+
+.firstrow {
+  margin-bottom: -70px;
+  text-decoration: underline;
+}
+
+
+
+
+.rosteri {
+  width: 190px;
+  height: 143px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  border-bottom: solid 6px rgb(76,21,104);
+}
+
+.playerinfo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding-left: 40px;
+}
+
+.playerinfo ul {
+  list-style: none;
+}
+
+.playerinfo li {
+  font-size: 40px;
+  padding-bottom: 100px;
+  white-space: nowrap;
+}
+
+/*STORE FLIKEN*/
+
+.clothes {
+  height: 260px;
+  width: 260px;
+}
+
+/*CONTACT FLIKEN*/
+
+.contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#facebook {
+  width: 100px;
+  height: 140px;
+}
+
+#twitter {
+  width: 120px;
+  height: 100px;
+}
+
+#instagram {
+  width: 120px;
+  height: 100px;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width:700px) {
+
+  body #homeimg { display: none; }
+  
+  nav li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0pt;
+   }
+
+   nav ul {
+     margin-top: 0px;
+     margin-bottom: 20px;
+   }
+
+   nav a::before {
+    display: none;
+   }
+   
+  header {
+    height: 50px;
+  }
+
+  .icon {
+    color: rgb(253, 185, 39);
+    padding: 10px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+  }
+
+  nav {
+    display: none;
+    overflow: hidden;
+    background-color: rgba(76,21,104,255);
+    position: relative;
+    width: 100%;
+  }
+
+  #navigation a {
+    display: none;
+    color: rgb(253, 185, 39);
+    padding-left: 30%;
+    padding-right: 30%;
+    text-decoration: none;
+    font-size: 17px;
+  
+
+    display: flex;
+    align-self: center;
+  }
+
+
+  #navigation a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .homebox {
+    background-color: rgb(179, 36, 250);
+    margin: 10px 10px 10px;
+    padding: 10px 20px 10px;
+  }
+  
+}
+
+@media screen and (min-width:700px) and (max-width: 1810px) {
+
+  header {
+    height: 116px;
+  }
+  nav li {
+    display: inline-block;
+    margin-left: 20px;
+    padding-top: 40px;
+    margin-bottom: 40px;
+  
+    position: relative;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width:1600px) {
+  .playerinfo li {
+    font-size: 2em;
+  }
+
+  .rosteri {
+    width: 172px;
+    height: 129px;
+  }
+}
+
+@media screen and (max-width:1400px) {
+  .playerinfo li {
+    font-size: 1.5em;
+  }
+
+  #roster {
+    width: 160px;
+    height: 118px;
+  }
+}
+
+@media screen and (min-width:701px) and (max-width:850px) {
+  .rosteri {
+    margin-left: -50px; 
+  }
+  
+  .playersa {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width:1220px) {
+  .playerinfo li {
+    font-size: 15px;
+  }
+
+  .playerinfo {
+    display: flex;
+    margin-top: 10px;
+    padding-left: 10px;
+  }
+
+  .rosteri {
+    width: 140px;
+    height: 105px;
+  }
+
+  .rostericon {
+    margin-top: -80px;
+  }
+}
+@media screen and (max-width:550px) { 
+  .rosteri {
+    display: none;
+  }
+
+  .playerinfo li {
+    font-size: 12px;
+    padding-bottom: 30px;
+  }
+
+  .firstrow {
+    margin-bottom: -20px;
+  }
+
+}
